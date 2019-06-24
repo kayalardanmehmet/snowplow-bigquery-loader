@@ -14,21 +14,15 @@ package com.snowplowanalytics.snowplow.storage.bigquery
 package loader
 
 import com.google.api.services.bigquery.model.TableReference
-
 import io.circe.Json
-
 import org.joda.time.Duration
-
 import com.spotify.scio.ScioContext
 import com.spotify.scio.values.{SCollection, SideOutput, WindowOptions}
-
 import org.apache.beam.sdk.transforms.windowing._
 import org.apache.beam.sdk.io.gcp.bigquery.{BigQueryIO, InsertRetryPolicy}
 import org.apache.beam.sdk.io.gcp.bigquery.BigQueryIO.Write.{CreateDisposition, WriteDisposition}
 import org.apache.beam.sdk.values.WindowingStrategy.AccumulationMode
-
 import com.snowplowanalytics.snowplow.analytics.scalasdk.Data.ShreddedType
-
 import common.Config._
 import common.Codecs.toPayload
 

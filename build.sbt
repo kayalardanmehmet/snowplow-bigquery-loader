@@ -1,5 +1,6 @@
 lazy val common = project.in(file("common"))
   .settings(BuildSettings.commonSettings)
+  .settings(BuildSettings.scalifySettings)
   .settings(Seq(
     name := "snowplow-bigquery-common",
     crossScalaVersions := Seq("2.12.8", "2.11.12"),

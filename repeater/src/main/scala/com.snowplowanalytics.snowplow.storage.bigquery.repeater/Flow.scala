@@ -12,25 +12,18 @@
  */
 package com.snowplowanalytics.snowplow.storage.bigquery.repeater
 
+import scala.concurrent.duration._
 import org.joda.time.DateTime
-
 import cats.syntax.all._
 import cats.effect._
 import cats.effect.concurrent.Ref
-
-import fs2.{ Stream, Chunk }
-import scala.concurrent.duration._
-
-
+import cats.data.{EitherT, NonEmptyList}
+import fs2.{Chunk, Stream}
 import io.chrisdavenport.log4cats.Logger
-
 import com.google.cloud.bigquery._
-
 import com.permutive.pubsub.consumer.Model
-
-import com.snowplowanalytics.snowplow.storage.bigquery.repeater.RepeaterCli.GcsPath
-import com.snowplowanalytics.snowplow.storage.bigquery.repeater.EventContainer.Desperate
-import com.snowplowanalytics.snowplow.storage.bigquery.repeater.services.Storage
+import RepeaterCli.GcsPath
+import services.Storage
 
 
 object Flow {
@@ -61,7 +54,7 @@ object Flow {
       .evalMap(sinkChunk(resources.counter, resources.bucket))
 
   /** Sink whole chunk of desperates into a filename, composed of time and chunk number */
-  def sinkChunk[F[_]: Timer: Sync: Logger](counter: Ref[F, Int], bucket: GcsPath)(chunk: Chunk[Desperate]): F[Unit] =
+  def sinkChunk[F[_]: Timer: Sync: Logger](counter: Ref[F, Int], bucket: GcsPath)(chunk: Chunk[BadRow]): F[Unit] =
     for {
       time <- getTime
       _ <- Logger[F].debug(s"Preparing for sinking a chunk, $time")
@@ -76,16 +69,22 @@ object Flow {
                                          dataset: String,
                                          table: String,
                                          backoffTime: Int)
-                                        (event: Model.Record[F, EventContainer]): F[Either[Desperate, Unit]] =
-    for {
-      ready <- event.value.isReady(backoffTime)
-      result <- if (ready)
-        event.ack >>
-          services.Database.insert[F](client, dataset, table, event.value)
-      else
-        Logger[F].debug(s"Event ${event.value.eventId}/${event.value.etlTstamp} is not ready yet. Nack") >>
-          event.nack.map(_.asRight)
+                                        (event: Model.Record[F, EventContainer]): F[Either[BadRow, Unit]] = {
+    val res = for {
+      ready <- EitherT(event.value.isReady(backoffTime).map(_.asRight[BadRow]))
+      parsedEvent <- EitherT(event.value.parsePayload)
+      result <- EitherT[F, BadRow, Unit] {
+        if (ready)
+          event.ack >>
+            EitherT(services.Database.insert[F](client, dataset, table, event.value))
+              .leftMap(e => BadRow.InternalError(parsedEvent, NonEmptyList.of(e)): BadRow).value
+        else
+          Logger[F].debug(s"Event ${event.value.eventId}/${event.value.etlTstamp} is not ready yet. Nack") >>
+            event.nack.map(_.asRight)
+      }
     } yield result
+    res.value
+  }
 
   private def getTime[F[_]: Sync]: F[DateTime] =
     Sync[F].delay(DateTime.now())
