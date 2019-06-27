@@ -15,13 +15,14 @@ package com.snowplowanalytics.snowplow.storage.bigquery.repeater
 import java.time.Instant
 import java.util
 import java.util.{UUID, List => JList, Map => JMap}
+
 import scala.collection.JavaConverters._
 import cats.syntax.either._
 import cats.effect.Sync
 import io.circe.{Decoder, Json, JsonObject}
 import io.circe.parser.parse
 import com.permutive.pubsub.consumer.decoder.MessageDecoder
-import com.snowplowanalytics.snowplow.analytics.scalasdk.Event
+import com.snowplowanalytics.snowplow.storage.bigquery.repeater.PayloadParser.ReconstructedEvent
 
 /**
   * Primary data type for events parsed from `failedInserts` PubSub subscription
@@ -35,7 +36,7 @@ case class EventContainer(eventId: UUID, etlTstamp: Instant, payload: JsonObject
   def isReady[F[_]: Sync](seconds: Long): F[Boolean] =
     Sync[F].delay(etlTstamp.isBefore(Instant.now().minusSeconds(seconds)))
 
-  def parsePayload[F[_]: Sync]: F[Either[BadRow, Event]] =
+  def parsePayload[F[_]: Sync]: F[Either[BadRow, ReconstructedEvent]] =
     Sync[F].delay(PayloadParser.parse(payload))
 }
 

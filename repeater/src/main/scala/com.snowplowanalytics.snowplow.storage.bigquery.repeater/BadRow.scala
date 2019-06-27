@@ -13,6 +13,7 @@
 package com.snowplowanalytics.snowplow.storage.bigquery.repeater
 
 import java.util.{List => JList, Map => JMap}
+
 import scala.collection.JavaConverters._
 import cats.data.NonEmptyList
 import io.circe.syntax._
@@ -20,8 +21,8 @@ import io.circe.{Encoder, Json}
 import com.google.cloud.bigquery.{BigQueryException, BigQueryError => JBigQueryError}
 import com.snowplowanalytics.iglu.core.SelfDescribingData
 import com.snowplowanalytics.iglu.core.circe.instances._
-import com.snowplowanalytics.snowplow.analytics.scalasdk.Event
 import com.snowplowanalytics.snowplow.storage.bigquery.common.{BadRowSchemas, ProcessorInfo}
+import com.snowplowanalytics.snowplow.storage.bigquery.repeater.PayloadParser.ReconstructedEvent
 
 /**
   * Represents rows of failed inserts which are problematic
@@ -39,6 +40,7 @@ object BadRow {
   /**
     * Represents situations where payload object can not be
     * converted back to enriched event format successfully
+    *
     * @param payload data which is tried to be converted back to enrich event
     * @param errors gives info about reasons of failure to convert it back
     */
@@ -47,11 +49,21 @@ object BadRow {
       SelfDescribingData(BadRowSchemas.RepeaterParsingError, (this: BadRow).asJson)
   }
 
-  trait ParsingErrorInfo
+  /**
+    * Gives info about reasons of failure to parse payload
+    *
+    * @param message error message
+    * @param location location in the JSON object where error happened
+    */
+  final case class ParsingErrorInfo(message: String, location: List[String])
 
   implicit val parsingErrorInfoEncoder: Encoder[ParsingErrorInfo] =
-    Encoder.instance { a =>
-      Json.obj("test" := "test".asJson)
+    Encoder.instance {
+      case ParsingErrorInfo(message, location) =>
+        Json.obj(
+          "message" := message.asJson,
+          "location" := location.asJson
+        )
     }
 
   /**
@@ -60,10 +72,10 @@ object BadRow {
     * converted back to enrich event format but some internal error
     * happened while trying to insert the event to BiqQuery
     *
-    * @param enrichedEvent event which created from payload data
+    * @param reconstructedEvent event which reconstructed from JSON payload
     * @param errors        gives info about reasons of internal error
     */
-  final case class InternalError(enrichedEvent: Event, errors: NonEmptyList[InternalErrorInfo]) extends BadRow {
+  final case class InternalError(reconstructedEvent: ReconstructedEvent, errors: NonEmptyList[InternalErrorInfo]) extends BadRow {
     def getSelfDescribingData: SelfDescribingData[Json] =
       SelfDescribingData(BadRowSchemas.RepeaterInternalError, (this: BadRow).asJson)
   }
@@ -76,9 +88,9 @@ object BadRow {
           "errors" := errors.asJson,
           "processor" := ProcessorInfo.BQLoaderProcessorInfo.asJson
         )
-      case InternalError(enrichedEvent, errors) =>
+      case InternalError(reconstructedEvent, errors) =>
         Json.obj(
-          "enrichedEvent" := enrichedEvent.asJson,
+          "event" := reconstructedEvent.asJson,
           "failures" := errors.asJson,
           "processor" := ProcessorInfo.BQLoaderProcessorInfo.asJson
         )

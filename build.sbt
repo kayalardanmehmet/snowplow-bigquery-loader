@@ -128,6 +128,7 @@ lazy val repeater = project.in(file("repeater"))
       Dependencies.httpClient,
       Dependencies.logging,
       Dependencies.slf4j,
+      Dependencies.circeLiteral,
 
       Dependencies.specs2,
       Dependencies.scalaCheck

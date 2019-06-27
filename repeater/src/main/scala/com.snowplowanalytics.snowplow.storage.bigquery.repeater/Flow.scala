@@ -72,12 +72,12 @@ object Flow {
                                         (event: Model.Record[F, EventContainer]): F[Either[BadRow, Unit]] = {
     val res = for {
       ready <- EitherT(event.value.isReady(backoffTime).map(_.asRight[BadRow]))
-      parsedEvent <- EitherT(event.value.parsePayload)
+      reconstructedEvent <- EitherT(event.value.parsePayload)
       result <- EitherT[F, BadRow, Unit] {
         if (ready)
           event.ack >>
             EitherT(services.Database.insert[F](client, dataset, table, event.value))
-              .leftMap(e => BadRow.InternalError(parsedEvent, NonEmptyList.of(e)): BadRow).value
+              .leftMap(e => BadRow.InternalError(reconstructedEvent, NonEmptyList.of(e)): BadRow).value
         else
           Logger[F].debug(s"Event ${event.value.eventId}/${event.value.etlTstamp} is not ready yet. Nack") >>
             event.nack.map(_.asRight)
