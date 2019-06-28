@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.snowplowanalytics:snowplow-scala-analytics-sdk_2.11:0.3.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.snowplowanalytics/snowplow-scala-analytics-sdk_2.11/jars/snowplow-scala-analytics-sdk_2.11-0.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.snowplowanalytics/snowplow-scala-analytics-sdk_2.11/srcs/snowplow-scala-analytics-sdk_2.11-0.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

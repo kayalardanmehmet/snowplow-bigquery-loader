@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="snowplow-bigquery-loader_305" />
+    <profile name="sbt 2" modules="snowplow-bigquery-common,snowplow-bigquery-mutator,snowplowBigqueryLoader">
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-target:jvm-1.8" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/com.olegpy/better-monadic-for_2.11/jars/better-monadic-for_2.11-0.2.4.jar" />
+        <plugin path="$USER_HOME$/.ivy2/cache/org.spire-math/kind-projector_2.11/jars/kind-projector_2.11-0.9.7.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 3" modules="snowplow-bigquery-forwarder,snowplow-bigquery-loader">
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-target:jvm-1.8" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/com.olegpy/better-monadic-for_2.11/jars/better-monadic-for_2.11-0.2.4.jar" />
+        <plugin path="$USER_HOME$/.ivy2/cache/org.spire-math/kind-projector_2.11/jars/kind-projector_2.11-0.9.7.jar" />
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scalamacros/paradise_2.11.12/jars/paradise_2.11.12-2.1.0.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.google.apis:google-api-services-clouddebugger:v2-rev233-1.23.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.apis/google-api-services-clouddebugger/jars/google-api-services-clouddebugger-v2-rev233-1.23.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.apis/google-api-services-clouddebugger/srcs/google-api-services-clouddebugger-v2-rev233-1.23.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

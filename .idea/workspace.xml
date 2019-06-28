@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="83284e6b-6093-43e9-beef-f58fad2c39bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loader/src/main/scala/com/snowplowanalytics/snowplow/storage/bigquery/loader/Loader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/loader/src/main/scala/com/snowplowanalytics/snowplow/storage/bigquery/loader/Loader.scala" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/project/target/" />
+    <ignored path="$PROJECT_DIR$/common/target/" />
+    <ignored path="$PROJECT_DIR$/loader/target/" />
+    <ignored path="$PROJECT_DIR$/forwarder/target/" />
+    <ignored path="$PROJECT_DIR$/mutator/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loader/src/main/scala/com/snowplowanalytics/snowplow/storage/bigquery/loader/Loader.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+              <folding>
+                <element signature="e#772#832#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/net.debasishg/redisclient_2.11/srcs/redisclient_2.11-3.10-sources.jar!/com/redis/SetOperations.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/loader/src/main/scala/com/snowplowanalytics/snowplow/storage/bigquery/loader/Loader.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/scala_compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/sbt.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules/snowplow-bigquery-common.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/snowplowBigqueryLoader.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/snowplow-bigquery-loader.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/snowplow-bigquery-forwarder.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/snowplow-bigquery-mutator.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/snowplowBigqueryLoader-build.iml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__args4j_args4j_2_33_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__co_fs2_fs2_core_2_11_1_0_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_amazonaws_aws_java_sdk_core_1_11_289_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_amazonaws_aws_java_sdk_dynamodb_1_11_289_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_amazonaws_aws_java_sdk_kms_1_11_289_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_amazonaws_aws_java_sdk_s3_1_11_289_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_amazonaws_jmespath_java_1_11_289_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_chuusai_shapeless_2_11_2_3_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_esotericsoftware_kryo_shaded_4_0_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_esotericsoftware_minlog_1_3_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_annotations_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_annotations_2_9_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_core_2_9_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_core_2_9_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_databind_2_6_7_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_databind_2_9_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_6_7_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_module_jackson_module_paranamer_2_9_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_module_jackson_module_scala_2_11_2_9_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_alexarchambault_case_app_2_11_2_0_0_M3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_alexarchambault_case_app_annotations_2_11_2_0_0_M3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_alexarchambault_case_app_util_2_11_2_0_0_M3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_fge_btf_1_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_fge_jackson_coreutils_1_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_fge_json_schema_core_1_2_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_fge_json_schema_validator_2_2_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_fge_msg_simple_1_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_github_fge_uri_template_0_9_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_api_common_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_client_google_api_client_1_24_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_client_google_api_client_jackson2_1_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_client_google_api_client_java6_1_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_gax_1_34_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_gax_grpc_0_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_gax_grpc_1_34_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_gax_httpjson_0_51_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_grpc_google_cloud_pubsub_v1_0_1_18_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_grpc_google_cloud_pubsub_v1_1_33_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_grpc_google_common_protos_0_1_9_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_cloud_pubsub_v1_0_1_18_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_cloud_pubsub_v1_1_33_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_common_protos_1_12_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_api_grpc_proto_google_iam_v1_0_12_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_bigquery_v2_rev397_1_24_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_clouddebugger_v2_rev233_1_23_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_cloudresourcemanager_v1_rev477_1_23_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_dataflow_v1b3_rev221_1_23_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_pubsub_v1_rev382_1_23_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_apis_google_api_services_storage_v1_rev124_1_23_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auth_google_auth_library_appengine_0_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auth_google_auth_library_credentials_0_11_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auth_google_auth_library_oauth2_http_0_11_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auto_auto_common_0_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auto_service_auto_service_1_0_rc3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_auto_value_auto_value_1_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_bigdataoss_gcsio_1_4_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_bigdataoss_util_1_4_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_bigtable_bigtable_client_core_1_0_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_bigtable_bigtable_protos_1_0_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_datastore_datastore_v1_proto_client_1_4_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_datastore_datastore_v1_protos_1_3_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_bigquery_1_51_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_core_1_51_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_core_grpc_1_2_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_core_grpc_1_51_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_core_http_1_51_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_cloud_google_cloud_pubsub_1_51_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_code_findbugs_jsr305_3_0_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_code_gson_gson_2_7_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_errorprone_error_prone_annotations_2_1_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_errorprone_error_prone_annotations_2_2_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_guava_guava_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_http_client_google_http_client_1_24_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_http_client_google_http_client_appengine_1_24_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_http_client_google_http_client_jackson2_1_24_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_http_client_google_http_client_jackson_1_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_http_client_google_http_client_protobuf_1_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_instrumentation_instrumentation_api_0_4_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_oauth_client_google_oauth_client_1_24_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_oauth_client_google_oauth_client_java6_1_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_protobuf_nano_protobuf_javanano_3_0_0_alpha_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_protobuf_protobuf_java_3_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_google_protobuf_protobuf_java_util_3_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_googlecode_javaewah_JavaEWAH_1_1_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_googlecode_libphonenumber_libphonenumber_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_monovore_decline_2_11_0_5_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_novocode_junit_interface_0_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_snowplowanalytics_iglu_core_2_11_0_3_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_snowplowanalytics_iglu_core_circe_2_11_0_3_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_snowplowanalytics_iglu_core_json4s_2_11_0_3_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_snowplowanalytics_iglu_scala_client_2_11_0_5_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_snowplowanalytics_schema_ddl_2_11_0_8_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_snowplowanalytics_snowplow_scala_analytics_sdk_2_11_0_3_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_spotify_scio_avro_2_11_0_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_spotify_scio_bigquery_2_11_0_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_spotify_scio_core_2_11_0_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_spotify_scio_test_2_11_0_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_squareup_okhttp_okhttp_2_5_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_squareup_okio_okio_1_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_thoughtworks_paranamer_paranamer_2_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_thoughtworks_paranamer_paranamer_2_8_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_algebird_core_2_11_0_13_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_chill_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_chill_algebird_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_chill_java_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_chill_protobuf_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_util_collection_2_11_6_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_util_core_2_11_6_20_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__commons_codec_commons_codec_1_9_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__commons_collections_commons_collections_3_2_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__commons_io_commons_io_2_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__commons_lang_commons_lang_2_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__commons_logging_commons_logging_1_1_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_core_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_java8_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_jawn_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_numbers_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_parser_2_11_0_9_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_dropwizard_metrics_metrics_core_3_1_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_all_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_auth_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_auth_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_context_1_12_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_context_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_core_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_core_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_netty_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_netty_shaded_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_okhttp_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_protobuf_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_protobuf_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_protobuf_lite_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_protobuf_lite_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_protobuf_nano_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_stub_1_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_grpc_grpc_stub_1_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_buffer_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_codec_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_codec_http2_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_codec_http_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_codec_socks_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_common_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_handler_4_1_8_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_handler_proxy_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_resolver_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_tcnative_boringssl_static_1_1_33_Fork26_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_netty_netty_transport_4_1_16_Final_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_opencensus_opencensus_api_0_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_opencensus_opencensus_contrib_grpc_metrics_0_12_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_opencensus_opencensus_contrib_grpc_util_0_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__io_opencensus_opencensus_contrib_http_util_0_15_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__javax_activation_activation_1_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__javax_inject_javax_inject_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__javax_mail_mailapi_1_4_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__joda_time_joda_time_2_9_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__joda_time_joda_time_2_9_9_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__me_lyh_protobuf_generic_2_11_0_2_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__net_sf_jopt_simple_jopt_simple_4_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_avro_avro_1_8_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_avro_avro_compiler_1_8_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_model_job_management_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_model_pipeline_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_runners_core_construction_java_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_runners_direct_java_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_runners_google_cloud_dataflow_java_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_sdks_java_core_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_sdks_java_extensions_google_cloud_platform_core_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_sdks_java_extensions_protobuf_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_beam_beam_sdks_java_io_google_cloud_platform_2_6_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_commons_commons_compress_1_8_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_commons_commons_lang3_3_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_commons_commons_math3_3_6_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_httpcomponents_httpclient_4_5_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_httpcomponents_httpcore_4_4_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_velocity_velocity_1_7_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_xbean_xbean_asm6_shaded_4_9_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_codehaus_jackson_jackson_core_asl_1_9_13_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_codehaus_jackson_jackson_mapper_asl_1_9_13_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_codehaus_mojo_animal_sniffer_annotations_1_17_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_all_1_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_joda_joda_convert_1_6_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_joda_joda_convert_1_8_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_ast_2_11_3_2_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_core_2_11_3_2_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_ext_2_11_3_2_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_jackson_2_11_3_2_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_scalaz_2_11_3_2_11_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_mozilla_rhino_1_7R4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_objenesis_objenesis_2_5_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_parser_combinators_2_11_1_1_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_0_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_compiler_2_11_12_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_11_12_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_11_12_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scalap_2_11_12_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_sbt_test_interface_1_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scalacheck_scalacheck_2_11_1_14_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_2_11_3_0_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_2_11_3_0_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scalaz_scalaz_core_2_11_7_0_9_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_scodec_scodec_bits_2_11_1_1_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_25_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_simple_1_7_25_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_specs2_specs2_common_2_11_4_3_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_specs2_specs2_core_2_11_4_3_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_specs2_specs2_fp_2_11_4_3_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_specs2_specs2_matcher_2_11_4_3_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_spire_math_jawn_parser_2_11_0_11_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_threeten_threetenbp_1_3_3_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_tukaani_xz_1_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_algebra_2_11_0_7_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_core_2_11_1_4_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_effect_2_11_1_0_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_kernel_2_11_1_4_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_macros_2_11_1_4_0_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_machinist_2_11_0_6_5_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_macro_compat_2_11_1_1_1_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_xerial_snappy_snappy_java_1_1_4_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__software_amazon_ion_ion_java_1_0_2_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__net_debasishg_redisclient_2_11_3_10_jar.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_commons_commons_pool2_2_6_0_jar.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="11" />
+    <option name="width" value="1680" />
+    <option name="height" value="1034" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snowplow-bigquery-loader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snowplow-bigquery-loader" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snowplow-bigquery-loader" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snowplow-bigquery-loader" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snowplow-bigquery-loader" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snowplow-bigquery-loader" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snowplowBigqueryLoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="snowplowBigqueryLoader" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="loader [file:/Users/mehmetkaya/Desktop/apps/Prisma/snowplow-bigquery-loader/]" />
+                <option name="path" value="$PROJECT_DIR$/loader" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="forwarder [file:/Users/mehmetkaya/Desktop/apps/Prisma/snowplow-bigquery-loader/]" />
+                <option name="path" value="$PROJECT_DIR$/forwarder" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="snowplowBigqueryLoader [file:/Users/mehmetkaya/Desktop/apps/Prisma/snowplow-bigquery-loader/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="mutator [file:/Users/mehmetkaya/Desktop/apps/Prisma/snowplow-bigquery-loader/]" />
+                <option name="path" value="$PROJECT_DIR$/mutator" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="common [file:/Users/mehmetkaya/Desktop/apps/Prisma/snowplow-bigquery-loader/]" />
+                <option name="path" value="$PROJECT_DIR$/common" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="snowplowBigqueryLoader-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/build.sbt" value="413413663" />
+        <entry key="$PROJECT_DIR$/project/BuildSettings.scala" value="1512154127" />
+        <entry key="$PROJECT_DIR$/project/Dependencies.scala" value="2206473291" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="3029178416" />
+        <entry key="$PROJECT_DIR$/project/plugins.sbt" value="1941793329" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83284e6b-6093-43e9-beef-f58fad2c39bc" name="Default Changelist" comment="" />
+      <created>1561710625618</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561710625618</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="sbt-shell-toolwindow" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="sbt" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/net.debasishg/redisclient_2.11/srcs/redisclient_2.11-3.10-sources.jar!/com/redis/SetOperations.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/net.debasishg/redisclient_2.11/srcs/redisclient_2.11-3.10-sources.jar!/com/redis/Pool.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/Option.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/net.debasishg/redisclient_2.11/srcs/redisclient_2.11-3.10-sources.jar!/com/redis/StringOperations.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="34" column="67" lean-forward="true" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader/src/main/scala/com/snowplowanalytics/snowplow/storage/bigquery/loader/Loader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+          <folding>
+            <element signature="e#772#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

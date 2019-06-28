@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.google.cloud.bigtable:bigtable-client-core:1.0.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.cloud.bigtable/bigtable-client-core/jars/bigtable-client-core-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.cloud.bigtable/bigtable-client-core/srcs/bigtable-client-core-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

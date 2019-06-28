@@ -48,7 +48,8 @@ lazy val loader = project.in(file("loader"))
 
       Dependencies.specs2,
       Dependencies.scioTest,
-      Dependencies.scalaCheck
+      Dependencies.scalaCheck,
+      "net.debasishg" %% "redisclient" % "3.10"
     )
   )
   .enablePlugins(JavaAppPackaging)

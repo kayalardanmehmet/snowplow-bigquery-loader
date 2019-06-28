@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.spotify:scio-bigquery_2.11:0.6.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.spotify/scio-bigquery_2.11/jars/scio-bigquery_2.11-0.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.spotify/scio-bigquery_2.11/srcs/scio-bigquery_2.11-0.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
