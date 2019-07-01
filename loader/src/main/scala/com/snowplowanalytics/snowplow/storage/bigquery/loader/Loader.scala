@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory
 object Loader {
 
   val logger = LoggerFactory.getLogger("Loader")
-  val rClients = new RedisClientPool("10.0.0.3", 6379)
+  val rClients = new RedisClientPool("10.128.15.238", 6379)
 
   val OutputWindow: Duration =
     Duration.millis(10000)
@@ -68,17 +68,30 @@ object Loader {
             val fingerprint = row.data.get("event_fingerprint").asInstanceOf[String]
             if (fingerprint != null){
 
-              rClients.withClient {
-                client => {
-                  val resp = client.get("fp-" + fingerprint)
-                  if (resp.getOrElse("-1").equals("-1")) {
-                    client.setex("fp-" + fingerprint, 86400, "1")
-                    ctx.output(ObservedTypesOutput, row.inventory)
-                    Some(row)
-                  }else{
-                    logger.warn("Duplicated event detected fingerprint: " + fingerprint)
-                    None
+              try {
+                rClients.withClient {
+                  client => {
+                    val resp = client.get("fp-" + fingerprint)
+                    if (resp.getOrElse("-1").equals("-1")) {
+                      client.setex("fp-" + fingerprint, 86400, "1")
+                      ctx.output(ObservedTypesOutput, row.inventory)
+                      Some(row)
+                    }else{
+                      logger.warn("Duplicated event detected fingerprint: " + fingerprint)
+                      None
+                    }
                   }
+                }
+              }catch {
+                case err: RedisConnectionException => {
+                  logger.error("redis connection error: " + err.message)
+                  ctx.output(ObservedTypesOutput, row.inventory)
+                  Some(row)
+                }
+                case err: Throwable => {
+                  logger.error("error: " + err.getMessage)
+                  ctx.output(ObservedTypesOutput, row.inventory)
+                  Some(row)
                 }
               }
 
