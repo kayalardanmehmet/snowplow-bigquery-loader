@@ -58,7 +58,7 @@ AS (
 ```sql
 DELETE FROM prisma_dataset.events
   WHERE event_id IN (SELECT event_id FROM duplicates.tmp_events_id) AND collector_tstamp < TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 40 MINUTE);
-``
+```
 
 We need to use this where condition because BQ doesn't allow deleting of just streamed rows. Or we need to shut down collector and after wait a while we can run the query without this time condition in where state.
 
