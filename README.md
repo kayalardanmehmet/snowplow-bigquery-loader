@@ -19,7 +19,7 @@ $ sbt "project mutator" test
 
 ## Deduplication steps on BigQuery
 
-1. Before running these queires, `duplicates` and `duplicate_structs` datesets should be deleted if exists and created again after that. After configure datasets we need to run below sql script to save duplicated event ids in another table.
+1. Before running these queires, `duplicates` dateset should be deleted if exists and created again after that. After configure dataset we need to run below sql script to save duplicated event ids in another table.
 
 ```sql
 CREATE TABLE duplicates.tmp_events_id
@@ -96,6 +96,99 @@ INSERT INTO prisma_dataset.events (
   );
 ```
 
+## Deduplication steps on BigQuery for duplicated records
+
+1. Before running these queires, `duplicate_structs` dateset should be deleted if exists and created again after that. After configure dataset we need to run below sql script to save duplicated event ids in another table.
+
+```sql
+CREATE TABLE duplicate_structs.tmp_events_id
+AS (
+
+  SELECT event_id
+  FROM (
+
+    SELECT event_id, ARRAY_LENGTH( contexts_com_snowplowanalytics_snowplow_client_session_1_0_1 ) AS count
+    FROM prisma_dataset.events
+    WHERE app_id != 'co.fourapps.aword'
+
+  )
+
+  WHERE count > 1
+
+);
+```
+
+2. We have event ids of events which has duplicated records. We can move these events to another table with just first record of duplicated records.
+
+```sql
+CREATE TABLE duplicate_structs.tmp_events
+AS (
+
+  SELECT
+  app_id, platform, etl_tstamp, collector_tstamp, dvce_created_tstamp, event, event_id, txn_id,
+      name_tracker, v_tracker, v_collector, v_etl,
+      user_id, user_ipaddress, user_fingerprint, domain_userid, domain_sessionidx, network_userid,
+      geo_country, geo_region, geo_city, geo_zipcode, geo_latitude, geo_longitude, geo_region_name,
+      ip_isp, ip_organization, ip_domain, ip_netspeed, page_url, page_title, page_referrer,
+      page_urlscheme, page_urlhost, page_urlport, page_urlpath, page_urlquery, page_urlfragment,
+      refr_urlscheme, refr_urlhost, refr_urlport, refr_urlpath, refr_urlquery, refr_urlfragment,
+      refr_medium, refr_source, refr_term, mkt_medium, mkt_source, mkt_term, mkt_content, mkt_campaign,
+      se_category, se_action, se_label, se_property, se_value,
+      tr_orderid, tr_affiliation, tr_total, tr_tax, tr_shipping, tr_city, tr_state, tr_country,
+      ti_orderid, ti_sku, ti_name, ti_category, ti_price, ti_quantity,
+      pp_xoffset_min, pp_xoffset_max, pp_yoffset_min, pp_yoffset_max,
+      useragent, br_name, br_family, br_version, br_type, br_renderengine, br_lang, br_features_pdf, br_features_flash,
+      br_features_java, br_features_director, br_features_quicktime, br_features_realplayer, br_features_windowsmedia,
+      br_features_gears, br_features_silverlight, br_cookies, br_colordepth, br_viewwidth, br_viewheight,
+      os_name, os_family, os_manufacturer, os_timezone, dvce_type, dvce_ismobile, dvce_screenwidth, dvce_screenheight,
+      doc_charset, doc_width, doc_height, tr_currency, tr_total_base, tr_tax_base, tr_shipping_base,
+      ti_currency, ti_price_base, base_currency, geo_timezone, mkt_clickid, mkt_network, etl_tags,
+      dvce_sent_tstamp, refr_domain_userid, refr_dvce_tstamp, domain_sessionid,
+      derived_tstamp, event_vendor, event_name, event_format, event_version, event_fingerprint, true_tstamp,
+      contexts_com_snowplowanalytics_snowplow_mobile_context_1_0_1, contexts_com_snowplowanalytics_snowplow_client_session_1_0_1[OFFSET(0)] AS contexts_com_snowplowanalytics_snowplow_client_session_1_0_1, unstruct_event_com_snowplowanalytics_snowplow_screen_view_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_application_error_1_0_0, contexts_com_snowplowanalytics_snowplow_geolocation_context_1_1_0, unstruct_event_com_snowplowanalytics_snowplow_timing_1_0_0, contexts_com_snowplowanalytics_mobile_application_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_application_background_1_0_0, contexts_com_snowplowanalytics_mobile_screen_1_0_0, unstruct_event_com_snowplowanalytics_mobile_screen_view_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_link_click_1_0_1, unstruct_event_com_snowplowanalytics_mobile_application_install_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_application_foreground_1_0_0
+  FROM prisma_dataset.events
+  WHERE event_id IN (SELECT event_id FROM duplicate_structs.tmp_events_id) AND app_id != 'co.fourapps.aword'
+
+);
+```
+
+3. Delete these events from `events` table.
+
+```sql
+  DELETE FROM prisma_dataset.events
+  WHERE event_id IN (SELECT event_id FROM duplicate_structs.tmp_events_id) AND collector_tstamp < TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 40 MINUTE)
+  ;
+```
+
+4. After that add these events with clean format again.
+
+```sql
+INSERT INTO prisma_dataset.events (SELECT
+
+app_id, platform, etl_tstamp, collector_tstamp, dvce_created_tstamp, event, event_id, txn_id,
+      name_tracker, v_tracker, v_collector, v_etl,
+      user_id, user_ipaddress, user_fingerprint, domain_userid, domain_sessionidx, network_userid,
+      geo_country, geo_region, geo_city, geo_zipcode, geo_latitude, geo_longitude, geo_region_name,
+      ip_isp, ip_organization, ip_domain, ip_netspeed, page_url, page_title, page_referrer,
+      page_urlscheme, page_urlhost, page_urlport, page_urlpath, page_urlquery, page_urlfragment,
+      refr_urlscheme, refr_urlhost, refr_urlport, refr_urlpath, refr_urlquery, refr_urlfragment,
+      refr_medium, refr_source, refr_term, mkt_medium, mkt_source, mkt_term, mkt_content, mkt_campaign,
+      se_category, se_action, se_label, se_property, se_value,
+      tr_orderid, tr_affiliation, tr_total, tr_tax, tr_shipping, tr_city, tr_state, tr_country,
+      ti_orderid, ti_sku, ti_name, ti_category, ti_price, ti_quantity,
+      pp_xoffset_min, pp_xoffset_max, pp_yoffset_min, pp_yoffset_max,
+      useragent, br_name, br_family, br_version, br_type, br_renderengine, br_lang, br_features_pdf, br_features_flash,
+      br_features_java, br_features_director, br_features_quicktime, br_features_realplayer, br_features_windowsmedia,
+      br_features_gears, br_features_silverlight, br_cookies, br_colordepth, br_viewwidth, br_viewheight,
+      os_name, os_family, os_manufacturer, os_timezone, dvce_type, dvce_ismobile, dvce_screenwidth, dvce_screenheight,
+      doc_charset, doc_width, doc_height, tr_currency, tr_total_base, tr_tax_base, tr_shipping_base,
+      ti_currency, ti_price_base, base_currency, geo_timezone, mkt_clickid, mkt_network, etl_tags,
+      dvce_sent_tstamp, refr_domain_userid, refr_dvce_tstamp, domain_sessionid,
+      derived_tstamp, event_vendor, event_name, event_format, event_version, event_fingerprint, true_tstamp,
+      contexts_com_snowplowanalytics_snowplow_mobile_context_1_0_1, ARRAY<STRUCT<session_id STRING, session_index INT64, storage_mechanism STRING, user_id STRING, first_event_id STRING, previous_session_id STRING>>[contexts_com_snowplowanalytics_snowplow_client_session_1_0_1] AS contexts_com_snowplowanalytics_snowplow_client_session_1_0_1, unstruct_event_com_snowplowanalytics_snowplow_screen_view_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_application_error_1_0_0, contexts_com_snowplowanalytics_snowplow_geolocation_context_1_1_0, unstruct_event_com_snowplowanalytics_snowplow_timing_1_0_0, contexts_com_snowplowanalytics_mobile_application_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_application_background_1_0_0, contexts_com_snowplowanalytics_mobile_screen_1_0_0, unstruct_event_com_snowplowanalytics_mobile_screen_view_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_link_click_1_0_1, unstruct_event_com_snowplowanalytics_mobile_application_install_1_0_0, unstruct_event_com_snowplowanalytics_snowplow_application_foreground_1_0_0
+
+FROM duplicate_structs.tmp_events)
+```
 
 ## Copyright and License
 
