@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.snowplowanalytics:schema-ddl_2.11:0.8.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.snowplowanalytics/schema-ddl_2.11/jars/schema-ddl_2.11-0.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.snowplowanalytics/schema-ddl_2.11/srcs/schema-ddl_2.11-0.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

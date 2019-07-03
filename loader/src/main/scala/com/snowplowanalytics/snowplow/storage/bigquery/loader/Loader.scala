@@ -26,9 +26,15 @@ import com.snowplowanalytics.snowplow.analytics.scalasdk.json.Data.InventoryItem
 import common.Config._
 import common.Codecs.toPayload
 import org.json4s.JsonAST.JValue
+import com.redis._
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 
 object Loader {
+
+  val logger = LoggerFactory.getLogger("Loader")
+  val rClients = new RedisClientPool("10.128.15.238", 6379)
 
   val OutputWindow: Duration =
     Duration.millis(10000)
@@ -57,8 +63,48 @@ object Loader {
       .withName("splitGoodBad")
       .flatMap {
         case (Right(row), ctx) =>
-          ctx.output(ObservedTypesOutput, row.inventory)
-          Some(row)
+
+          if(row.data != null && row.data.get("event_fingerprint") != null){
+            val fingerprint = row.data.get("event_fingerprint").asInstanceOf[String]
+            if (fingerprint != null){
+
+              try {
+                rClients.withClient {
+                  client => {
+                    val resp = client.get("fp-" + fingerprint)
+                    if (resp.getOrElse("-1").equals("-1")) {
+                      client.setex("fp-" + fingerprint, 86400, "1")
+                      ctx.output(ObservedTypesOutput, row.inventory)
+                      Some(row)
+                    }else{
+                      logger.warn("Duplicated event detected fingerprint: " + fingerprint)
+                      None
+                    }
+                  }
+                }
+              }catch {
+                case err: RedisConnectionException => {
+                  logger.error("redis connection error: " + err.message)
+                  ctx.output(ObservedTypesOutput, row.inventory)
+                  Some(row)
+                }
+                case err: Throwable => {
+                  logger.error("error: " + err.getMessage)
+                  ctx.output(ObservedTypesOutput, row.inventory)
+                  Some(row)
+                }
+              }
+
+            }else{
+              logger.warn("fingerprint null")
+              ctx.output(ObservedTypesOutput, row.inventory)
+              Some(row)
+            }
+          }else{
+            logger.warn("data null")
+            ctx.output(ObservedTypesOutput, row.inventory)
+            Some(row)
+          }
         case (Left(row), ctx) =>
           ctx.output(BadRowsOutput, row)
           None

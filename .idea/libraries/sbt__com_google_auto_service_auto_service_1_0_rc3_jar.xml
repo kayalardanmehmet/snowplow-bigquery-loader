@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.google.auto.service:auto-service:1.0-rc3:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.auto.service/auto-service/jars/auto-service-1.0-rc3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.auto.service/auto-service/srcs/auto-service-1.0-rc3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

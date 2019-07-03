@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.beam:beam-runners-google-cloud-dataflow-java:2.6.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.beam/beam-runners-google-cloud-dataflow-java/jars/beam-runners-google-cloud-dataflow-java-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.beam/beam-runners-google-cloud-dataflow-java/srcs/beam-runners-google-cloud-dataflow-java-2.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

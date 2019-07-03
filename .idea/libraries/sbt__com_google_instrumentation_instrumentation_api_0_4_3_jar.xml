@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.google.instrumentation:instrumentation-api:0.4.3:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.instrumentation/instrumentation-api/jars/instrumentation-api-0.4.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.instrumentation/instrumentation-api/srcs/instrumentation-api-0.4.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

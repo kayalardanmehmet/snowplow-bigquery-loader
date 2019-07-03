@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.google.apis:google-api-services-dataflow:v1b3-rev221-1.23.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.apis/google-api-services-dataflow/jars/google-api-services-dataflow-v1b3-rev221-1.23.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.google.apis/google-api-services-dataflow/srcs/google-api-services-dataflow-v1b3-rev221-1.23.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
